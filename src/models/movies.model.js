@@ -3,7 +3,7 @@ import prisma from "../../prisma/prisma.js";
 class MovieModel {
     // Obter todos os filmes
     async findAll() {
-        const movies = await prisma.movie.findMany({});
+        const movies = await prisma.movie.findMany();
 
         return {
             total: movies.length,
